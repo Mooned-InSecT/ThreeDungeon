@@ -31,7 +31,7 @@
 
 /* 移动 */
 #ctrl .move {
-    background-image: url(/resources/icons/ctrl-move.svg);
+    background-image: url(./resources/icons/ctrl-move.svg);
 }
 
 #ctrl .move-forward {
@@ -52,7 +52,7 @@
 
 /* 旋转 */
 #ctrl .rotate {
-    background-image: url(/resources/icons/ctrl-rotate.svg);
+    background-image: url(./resources/icons/ctrl-rotate.svg);
 }
 
 #ctrl .rotate-left {
@@ -104,7 +104,7 @@
 }
 
 #map div .player {
-    background-image: url(/resources/icons/map-player.svg);
+    background-image: url(./resources/icons/map-player.svg);
 }
 
 #map div .player-up {

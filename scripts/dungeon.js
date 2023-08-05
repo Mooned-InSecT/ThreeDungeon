@@ -1,4 +1,4 @@
-import * as THREE from "/scripts/three/three.module.min.js";
+import * as THREE from "./scripts/three/three.module.min.js";
 // import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const canvas = document.getElementById("dungeon");
