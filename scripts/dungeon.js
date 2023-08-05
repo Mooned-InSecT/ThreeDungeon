@@ -210,9 +210,9 @@ const geometryFloor = new THREE.PlaneGeometry(1, 1);
 const geometryCeiling = new THREE.PlaneGeometry(1, 1);
 
 const loader = new THREE.TextureLoader();
-const textureWall = loader.load('../resources/images/wall.png');
-const textureFloor = loader.load('../resources/images/floor.png');
-const textureCeiling = loader.load('../resources/images/ceiling.png');
+const textureWall = loader.load('./resources/images/wall.png');
+const textureFloor = loader.load('./resources/images/floor.png');
+const textureCeiling = loader.load('./resources/images/ceiling.png');
 textureWall.magFilter = THREE.NearestFilter;
 textureFloor.magFilter = THREE.NearestFilter;
 textureCeiling.magFilter = THREE.NearestFilter;
