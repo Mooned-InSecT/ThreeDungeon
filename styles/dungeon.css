@@ -1,0 +1,128 @@
+@media(min-aspect-ratio: 4/3) {
+    #dungeon {
+        width: 133vh;
+        height: 100vh;
+    }
+}
+
+@media(max-aspect-ratio: 4/3) {
+    #dungeon {
+        width: 100vw;
+        height: 75vw;
+    }
+}
+/* 操作按钮 */
+#ctrl {
+    position: absolute;
+    bottom: 3vmin;
+    left: 3vmin;
+}
+
+#ctrl button {
+    width: 12vmin;
+    height: 12vmin;
+    margin: 1vmin;
+    line-height: 100%;
+    text-align: center;
+    font-size: 5vmin;
+    border: 3px white solid;
+    border-radius: 2vmin;
+}
+
+/* 移动 */
+#ctrl .move {
+    background-image: url(/resources/icons/ctrl-move.svg);
+}
+
+#ctrl .move-forward {
+    transform: rotate(0)
+}
+
+#ctrl .move-back {
+    transform: rotate(180deg)
+}
+
+#ctrl .move-left {
+    transform: rotate(270deg)
+}
+
+#ctrl .move-right {
+    transform: rotate(90deg)
+}
+
+/* 旋转 */
+#ctrl .rotate {
+    background-image: url(/resources/icons/ctrl-rotate.svg);
+}
+
+#ctrl .rotate-left {
+    transform: scaleX(1)
+}
+
+#ctrl .rotate-right {
+    transform: scaleX(-1)
+}
+
+/* 地图 */
+#map {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 3vmin;
+    right: 3vmin;
+}
+
+#map div {
+    margin: 0;
+    padding: 0;
+    height: 3vmin;
+}
+
+#map div div {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    height: calc(3vmin - 1px);
+    width: calc(3vmin - 1px);
+    background-color: black;
+    border: 1px black solid;
+    overflow: hidden;
+    color: red;
+    line-height: 100%;
+    text-align: center;
+    font-size: 2.5vmin;
+}
+
+#map div .wall {
+    border: 1px white solid;
+    background-color: darkgray;
+}
+
+#map div .floor {
+    border: 1px white solid;
+    background-color: black;
+}
+
+#map div .player {
+    background-image: url(/resources/icons/map-player.svg);
+}
+
+#map div .player-up {
+    transform: rotate(180deg);
+}
+
+#map div .player-down {
+    transform: rotate(0deg);
+}
+
+#map div .player-left {
+    transform: rotate(90deg);
+}
+
+#map div .player-right {
+    transform: rotate(270deg);
+}
+
+.hide {
+    display: none;
+}

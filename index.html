@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+            overflow: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="/styles/dungeon.css">
+</head>
+
+<body>
+    <div>
+        <canvas id="dungeon"></canvas>
+        <div id="ctrl">
+            <button id="lt" class="rotate rotate-left"></button>
+            <button id="fw" class="move move-forward"></button>
+            <button id="rt" class="rotate rotate-right"></button>
+            <br>
+            <button id="lf" class="move move-left"></button>
+            <button id="bk" class="move move-back"></button>
+            <button id="rg" class="move move-right"></button>
+        </div>
+        <div id="map">
+        </div>
+    </div>
+    <!-- <script type="importmap">
+        {
+            "imports": {
+                "three": "/node_modules/three/build/three.module.min.js",
+                "three/addons/": "/node_modules/three/examples/jsm/"
+            }
+        }
+    </script> -->
+    <script type="module" src="/scripts/dungeon.js"></script>
+</body>
+
+</html>
