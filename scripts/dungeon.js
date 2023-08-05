@@ -1,5 +1,4 @@
 import * as THREE from "./three/three.module.min.js";
-// import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const canvas = document.getElementById("dungeon");
 const mapElement = document.getElementById("map");
@@ -26,12 +25,6 @@ player.add(camera);
 
 const light = new THREE.PointLight(0xFFFFFF, 0.5);
 player.add(light);
-// const light1 = new THREE.PointLight(0xFFFFFF, 50);
-// light1.position.y = 10;
-// player.add(light1);
-// const light2 = new THREE.PointLight(0xFFFFFF, 50);
-// light2.position.y = -10;
-// player.add(light2);
 
 // 键盘操作
 window.addEventListener("keydown", e => {
@@ -226,9 +219,6 @@ textureCeiling.magFilter = THREE.NearestFilter;
 const materialWall = new THREE.MeshStandardMaterial({ map: textureWall });
 const materialFloor = new THREE.MeshStandardMaterial({ map: textureFloor, side: THREE.DoubleSide });
 const materialCeiling = new THREE.MeshStandardMaterial({ map: textureCeiling, side: THREE.DoubleSide });
-// const materialWall = new THREE.MeshPhongMaterial({ color: "sienna", wireframe: false });
-// const materialFloor = new THREE.MeshPhongMaterial({ color: "forestgreen", wireframe: false, side: THREE.DoubleSide });
-// const materialCeiling = new THREE.MeshBasicMaterial({ color: "skyblue", wireframe: false, side: THREE.DoubleSide });
 
 const walls = [];
 const floors = [];
@@ -312,7 +302,6 @@ function updateMap() {
             const y = Math.round(player.position.y)
             if (x === j && y === i) {
                 cell.classList.add("player");
-                // console.log(Math.round(2 * player.rotation.y / Math.PI))
                 switch (Math.round(2 * player.rotation.y / Math.PI)) {
                     case 0:
                         cell.classList.add("player-down");
@@ -333,12 +322,6 @@ function updateMap() {
 }
 
 updateMap();
-
-
-// 测试镜头控制
-// const controls = new OrbitControls(camera, renderer.domElement);
-// controls.update();
-
 
 window.onresize = resize;
 resize();
